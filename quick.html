@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000024;
+            color: #fff;
+        }
+
+        #magicWord {
+            font-size: 36px;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #9eddef;
+        }
+
+        #imageContainer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 0 10px rgb(126, 128, 35);
+            opacity: 0;
+        }
+        @media screen and (max-width: 768px) {
+            #magicWord {
+                font-size: 24px;
+            }
+
+            .image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imageContainer">
+        <a href="https://console.firebase.google.com/u/0/project/accountfileuploadjs/storage/accountfileuploadjs.appspot.com/files/~2FPetty%20cash"><img class="image" src="pettycash.jpg" alt="Image 1" ></a>
+        <a href="https://console.firebase.google.com/u/0/project/accountfileuploadjs/storage/accountfileuploadjs.appspot.com/files/~2FAllSalesTotal"><img class="image" src="https://dcassetcdn.com/design_img/3705670/682209/22259570/4ynb6r4kjk0x7sny5xjfssr46s_image.jpg" alt="Image 2"></a>
+        <a href="https://docs.google.com/spreadsheets/d/1SkPYuXejVOGkmAR9NIEaVOa_tk9y_3PDW0z1DNfapUQ/edit#gid=0"><img class="image" src="https://cdn1.vectorstock.com/i/1000x1000/84/85/production-icon-symbol-creative-sign-from-vector-25938485.jpg" alt="Image 3"></a> 
+        <a href="#"><img class="image" src="https://previews.123rf.com/images/ionutparvu/ionutparvu1612/ionutparvu161201068/67602581-accounts-stamp-sign-text-word-logo-blue.jpg" alt="Image 4"></a>
+        <a href="https://docs.google.com/spreadsheets/d/1wJnqzGxUCnhHEg-YewQjRlVlMoHHHFGovLkA6u4WKbQ/edit#gid=0"><img class="image" src="Ap.png" alt="Image 5"></a>
+        <a href="#"><img class="image" src="https://kavithsainaani.com/cdn/shop/files/Kavith_Logo.png?height=628&pad_color=FFFFFF&v=1633791418&width=1200" alt="Image 6"></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            performMagic();
+        });
+
+        function performMagic() {
+            anime({
+                targets: '.image',
+                translateY: [
+                    { value: '50px', duration: 500, easing: 'easeInOutQuad' },
+                    { value: '0', duration: 800, easing: 'easeInOutQuad' },
+                    { value: '50px', duration: 500, easing: 'easeInOutQuad' },
+                    { value: '0', duration: 800, easing: 'easeInOutQuad' }
+                ],
+                rotate: {
+                    value: '+=360',
+                    duration: 1000,
+                    easing: 'easeInOutQuad'
+                },
+                opacity: [
+                    { value: 1, duration: 500, easing: 'easeInOutQuad' },
+                    { value: 0.5, duration: 800, easing: 'easeInOutQuad' },
+                    { value: 1, duration: 500, easing: 'easeInOutQuad' }
+                ],
+                delay: anime.stagger(100),
+            });
+        }
+    </script>
+</body>
+
+</html>
+

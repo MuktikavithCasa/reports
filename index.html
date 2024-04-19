@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/f2afa421ca.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <title>login page</title>
+</head>
+<style>
+body{
+    background: url(https://images.pexels.com/photos/230794/pexels-photo-230794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed;
+    background-size: cover;
+}
+</style>
+<body>
+
+    <div class="container">
+        <h1>Login </h1><br><br>
+        <div class="box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" id="email" placeholder="Enter User ID">
+
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" name="password" id="password" placeholder="Enter Your password">
+
+        </div>
+        <button type="submit" onclick="auth()"  class="btn">Log In</button>
+        <a href="Register.html" target="_blank"><button type="submit" onclick="createCredentials()" class="btn" >Register</button></a>
+
+
+    </div>
+</body>
+
+</html>
